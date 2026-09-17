@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Richard Wu - Rutgers Business School Sophomore studying Accounting and Leadership & Management. Explore my skills, projects, experience, and resume."
+  >
+
+  <meta name="theme-color" content="#cc0033">
+
+  <title>Richard Wu | Rutgers Business School Portfolio</title>
+
+  <style>
+    /* ======================================================
+       VARIABLES
+    ====================================================== */
+
+    :root {
+      --scarlet: #cc0033;
+      --scarlet-dark: #9b0027;
+      --scarlet-light: #f8e8ec;
+
+      --black: #111111;
+      --charcoal: #262626;
+      --gray-dark: #4a4a4a;
+      --gray: #727272;
+      --gray-light: #f4f4f4;
+      --border: #dddddd;
+      --white: #ffffff;
+
+      --max-width: 1180px;
+
+      --shadow:
+        0 16px 40px rgba(0, 0, 0, 0.11);
+
+      --radius: 14px;
+    }
+
+    /* ======================================================
+       RESET
+    ====================================================== */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      min-height: 100vh;
+
+      color: var(--black);
+      background: var(--white);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(
+        var(--max-width),
+        calc(100% - 2rem)
+      );
+
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+
+      z-index: 9999;
+
+      padding: 0.75rem 1rem;
+
+      color: var(--white);
+      background: var(--black);
+
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* ======================================================
+       TOP BAR
+    ====================================================== */
+
+    .top-bar {
+      height: 7px;
+      background: var(--scarlet);
+    }
+
+    /* ======================================================
+       NAVIGATION
+    ====================================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.96);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+
+      gap: 0.85rem;
+
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--white);
+      background: var(--scarlet);
+
+      font-size: 1rem;
+      font-weight: 900;
+
+      border-radius: 3px;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+
+      line-height: 1.15;
+    }
+
+    .brand-name {
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .brand-school {
+      margin-top: 0.2rem;
+
+      color: var(--gray);
+
+      font-size: 0.7rem;
+      font-weight: 800;
+
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      gap: 1.4rem;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 0.5rem 0;
+
+      color: var(--gray-dark);
+
+      font-size: 0.88rem;
+      font-weight: 800;
+
+      text-decoration: none;
+
+      transition:
+        color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--scarlet);
+    }
+
+    .nav-links .resume-nav {
+      padding:
+        0.65rem 1rem;
+
+      color:
+        var(--white);
+
+      background:
+        var(--scarlet);
+
+      border-radius:
+        5px;
+    }
+
+    .nav-links .resume-nav:hover {
+      color: var(--white);
+      background: var(--scarlet-dark);
+    }
+
+    .menu-button {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      color: var(--black);
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        6px;
+
+      font: inherit;
+      font-size: 1.25rem;
+
+      cursor: pointer;
+    }
+
+    /* ======================================================
+       BUTTONS
+    ====================================================== */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 0.45rem;
+
+      min-height: 50px;
+
+      padding:
+        0.78rem 1.3rem;
+
+      border:
+        2px solid transparent;
+
+      border-radius:
+        6px;
+
+      font-size: 0.91rem;
+      font-weight: 900;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-scarlet {
+      color: var(--white);
+      background: var(--scarlet);
+      border-color: var(--scarlet);
+    }
+
+    .button-scarlet:hover {
+      background: var(--scarlet-dark);
+      border-color: var(--scarlet-dark);
+    }
+
+    .button-black {
+      color: var(--white);
+      background: var(--black);
+      border-color: var(--black);
+    }
+
+    .button-black:hover {
+      background: var(--charcoal);
+    }
+
+    .button-outline {
+      color: var(--black);
+      background: transparent;
+      border-color: var(--black);
+    }
+
+    .button-outline:hover {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .button-white {
+      color: var(--scarlet);
+      background: var(--white);
+      border-color: var(--white);
+    }
+
+    .button-white:hover {
+      color: var(--white);
+      background: transparent;
+    }
+
+    .button-white-outline {
+      color: var(--white);
+      background: transparent;
+      border-color: var(--white);
+    }
+
+    .button-white-outline:hover {
+      color: var(--scarlet);
+      background: var(--white);
+    }
+
+    /* ======================================================
+       HERO
+    ====================================================== */
+
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--white) 0%,
+          var(--white) 68%,
+          var(--gray-light) 68%,
+          var(--gray-light) 100%
+        );
+    }
+
+    .hero-section::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 7px;
+      height: 100%;
+
+      background: var(--scarlet);
+    }
+
+    .hero {
+      min-height:
+        calc(100vh - 85px);
+
+      display: grid;
+
+      grid-template-columns:
+        1.35fr 0.65fr;
+
+      align-items: center;
+
+      gap: 5rem;
+
+      padding:
+        5rem 0;
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+
+      gap: 0.7rem;
+
+      margin-bottom: 1.4rem;
+
+      color: var(--scarlet);
+
+      font-size: 0.78rem;
+      font-weight: 900;
+
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker::before {
+      content: "";
+
+      width: 38px;
+      height: 4px;
+
+      background: var(--scarlet);
+    }
+
+    .hero h1 {
+      margin-bottom: 0.7rem;
+
+      font-size:
+        clamp(3.8rem, 8vw, 7rem);
+
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+    }
+
+    .hero h1 span {
+      color: var(--scarlet);
+    }
+
+    .hero-degree {
+      margin-bottom: 1.75rem;
+
+      color: var(--gray-dark);
+
+      font-size:
+        clamp(1rem, 2vw, 1.3rem);
+
+      font-weight: 700;
+    }
+
+    .statement-label {
+      display: block;
+
+      margin-bottom: 0.45rem;
+
+      color: var(--gray);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .personal-statement {
+      max-width: 750px;
+
+      margin-bottom: 2rem;
+
+      padding-left: 1.1rem;
+
+      color: var(--charcoal);
+
+      border-left:
+        4px solid var(--scarlet);
+
+      font-size:
+        clamp(1.02rem, 2vw, 1.19rem);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.8rem;
+    }
+
+    /* ======================================================
+       HEADSHOT
+    ====================================================== */
+
+    .headshot-area {
+      max-width: 350px;
+
+      margin-inline: auto;
+    }
+
+    .headshot-frame {
+      position: relative;
+    }
+
+    .headshot-frame::before {
+      content: "";
+
+      position: absolute;
+      top: -18px;
+      left: -18px;
+
+      width: 65%;
+      height: 65%;
+
+      background: var(--scarlet);
+    }
+
+    .headshot-frame::after {
+      content: "";
+
+      position: absolute;
+      right: -18px;
+      bottom: -18px;
+
+      width: 65%;
+      height: 65%;
+
+      background: var(--black);
+    }
+
+    .headshot {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      aspect-ratio: 1 / 1.12;
+
+      object-fit: cover;
+      object-position: center top;
+
+      background: var(--gray-light);
+
+      border:
+        7px solid var(--white);
+
+      box-shadow: var(--shadow);
+    }
+
+    .academic-card {
+      position: relative;
+
+      z-index: 3;
+
+      width:
+        calc(100% - 30px);
+
+      margin:
+        -20px auto 0;
+
+      padding:
+        1rem 1.15rem;
+
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .academic-card strong {
+      display: block;
+
+      margin-bottom: 0.15rem;
+
+      font-size: 1rem;
+    }
+
+    .academic-card span {
+      color: #d5d5d5;
+      font-size: 0.78rem;
+    }
+
+    /* ======================================================
+       GENERAL SECTIONS
+    ====================================================== */
+
+    section {
+      padding:
+        6.2rem 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+
+      gap: 0.55rem;
+
+      margin-bottom: 0.7rem;
+
+      color: var(--scarlet);
+
+      font-size: 0.73rem;
+      font-weight: 900;
+
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 25px;
+      height: 3px;
+
+      background: var(--scarlet);
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0.8rem;
+
+      font-size:
+        clamp(2.2rem, 5vw, 3.5rem);
+
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading p {
+      color: var(--gray);
+
+      font-size: 1.02rem;
+    }
+
+    /* ======================================================
+       ABOUT
+    ====================================================== */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.25fr 0.75fr;
+
+      gap: 4rem;
+
+      align-items: start;
+    }
+
+    .about-copy {
+      color: var(--gray-dark);
+
+      font-size: 1.04rem;
+    }
+
+    .about-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .facts {
+      display: grid;
+
+      gap: 0.75rem;
+    }
+
+    .fact {
+      padding:
+        1rem 1.1rem;
+
+      background: var(--gray-light);
+
+      border-left:
+        5px solid var(--scarlet);
+    }
+
+    .fact small {
+      display: block;
+
+      margin-bottom: 0.15rem;
+
+      color: var(--gray);
+
+      font-size: 0.67rem;
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .fact strong {
+      font-size: 0.95rem;
+    }
+
+    /* ======================================================
+       SKILLS
+    ====================================================== */
+
+    .skills-section {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .skills-section
+    .section-heading h2 {
+      color: var(--white);
+    }
+
+    .skills-section
+    .section-heading p {
+      color: #c9c9c9;
+    }
+
+    .skills-section .eyebrow {
+      color: #ff668b;
+    }
+
+    .skills-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 1.2rem;
+    }
+
+    .skill-card {
+      padding: 1.5rem;
+
+      background: #1a1a1a;
+
+      border-top:
+        5px solid var(--scarlet);
+    }
+
+    .skill-number {
+      margin-bottom: 1rem;
+
+      color: #ff668b;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.09em;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 1rem;
+
+      font-size: 1.08rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.5rem;
+
+      list-style: none;
+    }
+
+    .skill-tags li {
+      padding:
+        0.4rem 0.62rem;
+
+      color: #e8e8e8;
+      background: #292929;
+
+      border:
+        1px solid #3c3c3c;
+
+      border-radius: 4px;
+
+      font-size: 0.79rem;
+    }
+
+    /* ======================================================
+       PROJECTS
+    ====================================================== */
+
+    .projects-section {
+      background: var(--gray-light);
+    }
+
+    .projects-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 1.3rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      min-height: 100%;
+
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.06);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform:
+        translateY(-5px);
+
+      box-shadow: var(--shadow);
+    }
+
+    .project-bar {
+      height: 7px;
+
+      background: var(--scarlet);
+    }
+
+    .project-content {
+      flex: 1;
+
+      padding: 1.5rem;
+    }
+
+    .project-number {
+      margin-bottom: 1rem;
+
+      color: var(--scarlet);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.12em;
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.75rem;
+
+      font-size: 1.2rem;
+
+      line-height: 1.3;
+    }
+
+    .project-card p {
+      margin-bottom: 1.2rem;
+
+      color: var(--gray);
+
+      font-size: 0.92rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.4rem;
+    }
+
+    .project-tags span {
+      padding:
+        0.33rem 0.52rem;
+
+      color: var(--charcoal);
+      background: var(--gray-light);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 4px;
+
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 1rem;
+
+      padding:
+        1rem 1.5rem;
+
+      background: var(--black);
+    }
+
+    .project-links a {
+      color: var(--white);
+
+      font-size: 0.8rem;
+      font-weight: 900;
+
+      text-decoration: none;
+    }
+
+    .project-links a:hover {
+      color: #ff668b;
+    }
+
+    /* ======================================================
+       EXPERIENCE
+    ====================================================== */
+
+    .timeline {
+      display: grid;
+
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      display: grid;
+
+      grid-template-columns:
+        180px 1fr;
+
+      gap: 2rem;
+
+      padding: 1.45rem;
+
+      background: var(--gray-light);
+
+      border-left:
+        5px solid var(--scarlet);
+    }
+
+    .timeline-date {
+      color: var(--gray);
+
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 0.15rem;
+
+      font-size: 1.08rem;
+    }
+
+    .company {
+      display: block;
+
+      margin-bottom: 0.55rem;
+
+      color: var(--scarlet);
+
+      font-size: 0.87rem;
+      font-weight: 900;
+    }
+
+    .timeline-item p {
+      color: var(--gray-dark);
+
+      font-size: 0.91rem;
+    }
+
+    /* ======================================================
+       EDUCATION
+    ====================================================== */
+
+    .education-section {
+      background: var(--gray-light);
+    }
+
+    .education-card {
+      display: grid;
+
+      grid-template-columns:
+        180px 1fr;
+
+      gap: 2rem;
+
+      padding: 2rem;
+
+      background: var(--white);
+
+      border-left:
+        8px solid var(--scarlet);
+
+      box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+    }
+
+    .education-date {
+      color: var(--scarlet);
+
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .education-card h3 {
+      margin-bottom: 0.15rem;
+
+      font-size: 1.4rem;
+    }
+
+    .education-card h4 {
+      margin-bottom: 0.75rem;
+
+      color: var(--gray-dark);
+
+      font-size: 0.98rem;
+    }
+
+    .education-card p {
+      color: var(--gray);
+    }
+
+    .honors {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.5rem;
+
+      margin-top: 1rem;
+    }
+
+    .honors span {
+      padding:
+        0.4rem 0.65rem;
+
+      color: var(--scarlet);
+      background: var(--scarlet-light);
+
+      border:
+        1px solid #e9bec9;
+
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    /* ======================================================
+       RESUME
+    ====================================================== */
+
+    .resume-section {
+      color: var(--white);
+      background: var(--scarlet);
+    }
+
+    .resume-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1.2fr;
+
+      gap: 4rem;
+
+      align-items: center;
+    }
+
+    .resume-copy .eyebrow {
+      color: var(--white);
+    }
+
+    .resume-copy .eyebrow::before {
+      background: var(--white);
+    }
+
+    .resume-copy h2 {
+      margin-bottom: 1rem;
+
+      font-size:
+        clamp(2.4rem, 5vw, 3.8rem);
+
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .resume-copy p {
+      margin-bottom: 1.5rem;
+
+      color: #ffe4eb;
+    }
+
+    .resume-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.8rem;
+    }
+
+    .resume-preview {
+      min-height: 630px;
+
+      overflow: hidden;
+
+      background: var(--white);
+
+      border:
+        7px solid var(--white);
+
+      box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.22);
+    }
+
+    .resume-preview iframe {
+      display: block;
+
+      width: 100%;
+      height: 630px;
+
+      border: 0;
+    }
+
+    /* ======================================================
+       CONTACT
+    ====================================================== */
+
+    .contact-section {
+      background: var(--black);
+    }
+
+    .contact-box {
+      padding: 3.2rem;
+
+      color: var(--white);
+
+      background: #181818;
+
+      border-top:
+        8px solid var(--scarlet);
+    }
+
+    .contact-box .eyebrow {
+      color: #ff668b;
+    }
+
+    .contact-box h2 {
+      max-width: 750px;
+
+      margin-bottom: 0.8rem;
+
+      font-size:
+        clamp(2.2rem, 5vw, 3.4rem);
+
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .contact-box p {
+      max-width: 700px;
+
+      margin-bottom: 1.5rem;
+
+      color: #c9c9c9;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.8rem;
+    }
+
+    /* ======================================================
+       FOOTER
+    ====================================================== */
+
+    footer {
+      padding: 2rem 0;
+
+      color: #bcbcbc;
+      background: #080808;
+
+      border-top:
+        1px solid #282828;
+
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      color: #d0d0d0;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    /* ======================================================
+       RESPONSIVE
+    ====================================================== */
+
+    @media (max-width: 980px) {
+      .hero-section {
+        background: var(--white);
+      }
+
+      .hero {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+      }
+
+      .headshot-area {
+        width: min(350px, 85%);
+      }
+
+      .about-grid,
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-button {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding:
+          0.7rem 1rem 1rem;
+
+        background: var(--white);
+
+        border-bottom:
+          1px solid var(--border);
+
+        box-shadow:
+          0 8px 20px
+          rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 0.8rem;
+      }
+
+      .nav-links .resume-nav {
+        margin-top: 0.35rem;
+
+        text-align: center;
+      }
+
+      section {
+        padding:
+          4.5rem 0;
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item,
+      .education-card {
+        grid-template-columns: 1fr;
+
+        gap: 0.5rem;
+      }
+
+      .resume-preview {
+        min-height: 500px;
+      }
+
+      .resume-preview iframe {
+        height: 500px;
+      }
+
+      .contact-box {
+        padding: 2rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand-school {
+        display: none;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-buttons,
+      .resume-buttons,
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .resume-preview {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+
+    :focus-visible {
+      outline:
+        3px solid #3d8bfd;
+
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a
+    href="#main"
+    class="skip-link"
+  >
+    Skip to main content
+  </a>
+
+  <div
+    class="top-bar"
+    aria-hidden="true"
+  ></div>
+
+  <!-- ====================================================
+       NAVIGATION
+  ==================================================== -->
+
+  <header>
+
+    <nav
+      class="container"
+      aria-label="Main navigation"
+    >
+
+      <a
+        class="brand"
+        href="#home"
+      >
+
+        <span class="brand-mark">
+          RW
+        </span>
+
+        <span class="brand-copy">
+
+          <span class="brand-name">
+            Richard Wu
+          </span>
+
+          <span class="brand-school">
+            Rutgers Business School
+          </span>
+
+        </span>
+
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navigation"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+
+      <ul
+        class="nav-links"
+        id="navigation"
+      >
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#experience">
+            Experience
+          </a>
+        </li>
+
+        <li>
+          <a href="#education">
+            Education
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="resume-nav"
+            href="Resume%20Final.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Résumé
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main id="main">
+
+    <!-- ==================================================
+         PERSONAL STATEMENT / HERO
+    ================================================== -->
+
+    <section
+      class="hero-section"
+      id="home"
+    >
+
+      <div class="container hero">
+
+        <div>
+
+          <div class="hero-kicker">
+            Rutgers Business School
+          </div>
+
+          <h1>
+            Richard
+            <span>Wu.</span>
+          </h1>
+
+          <p class="hero-degree">
+            Accounting • Leadership &amp; Management
+          </p>
+
+          <span class="statement-label">
+            Personal Statement
+          </span>
+
+          <p class="personal-statement">
+            I'm a Rutgers Business School student studying
+Accounting and Leadership & Management, with interests
+in accounting, business operations, and leadership.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              class="button button-scarlet"
+              href="#projects"
+            >
+              View My Projects
+            </a>
+
+            <a
+              class="button button-black"
+              href="Resume%20Final.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Résumé
+            </a>
+
+            <a
+              class="button button-outline"
+              href="https://www.linkedin.com/in/richardwu12/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="headshot-area">
+
+          <div class="headshot-frame">
+
+            <img
+              class="headshot"
+              src="headshot.png"
+              alt="Professional headshot of Richard Wu"
+            >
+
+          </div>
+
+          <div class="academic-card">
+
+            <strong>
+              Rutgers Business School
+            </strong>
+
+            <span>
+              B.S. • 4.0 GPA • Expected May 2029
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         ABOUT
+    ================================================== -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            About Me
+          </span>
+
+          <h2>
+            Business-minded and
+            detail-oriented.
+          </h2>
+
+          <p>
+            Building experience across accounting,
+            management, technology, operations,
+            and leadership.
+          </p>
+
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+
+            <p>
+              I am pursuing a Bachelor of Science at
+              Rutgers Business School in Accounting and
+              Leadership &amp; Management. My academic
+              and professional experiences have strengthened
+              my attention to detail, communication,
+              organization, and ability to work with
+              high-volume records.
+            </p>
+
+            <p>
+              As a Student Assistant with the Office of
+              Student Involvement and Leadership, I review
+              student organization financial requests and
+              documentation while helping maintain organized
+              and accurate records.
+            </p>
+
+            <p>
+              My previous leadership experience in esports
+              also developed my abilities in scheduling,
+              operations, communication, team coordination,
+              and working with multiple stakeholders.
+            </p>
+
+          </div>
+
+          <div class="facts">
+
+            <div class="fact">
+              <small>University</small>
+              <strong>
+                Rutgers University
+              </strong>
+            </div>
+
+            <div class="fact">
+              <small>School</small>
+              <strong>
+                Rutgers Business School
+              </strong>
+            </div>
+
+            <div class="fact">
+              <small>Major</small>
+              <strong>
+                Accounting
+              </strong>
+            </div>
+
+            <div class="fact">
+              <small>Additional Study</small>
+              <strong>
+                Leadership &amp; Management
+              </strong>
+            </div>
+
+            <div class="fact">
+              <small>GPA</small>
+              <strong>
+                4.0 / 4.0
+              </strong>
+            </div>
+
+            <div class="fact">
+              <small>Expected Graduation</small>
+              <strong>
+                May 2029
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         SKILLS
+    ================================================== -->
+
+    <section
+      class="skills-section"
+      id="skills"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Skills Showcase
+          </span>
+
+          <h2>
+            Skills I bring to a team.
+          </h2>
+
+          <p>
+            A combination of financial, technical,
+            organizational, communication, and leadership
+            experience.
+          </p>
+
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+
+            <div class="skill-number">
+              01 / BUSINESS OPERATIONS
+            </div>
+
+            <h3>
+              Financial &amp; Administrative
+            </h3>
+
+            <ul class="skill-tags">
+              <li>Budget Tracking</li>
+              <li>Invoice Review</li>
+              <li>Payment Requests</li>
+              <li>Record Management</li>
+              <li>Documentation</li>
+            </ul>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-number">
+              02 / TECHNOLOGY
+            </div>
+
+            <h3>
+              Technical Skills
+            </h3>
+
+            <ul class="skill-tags">
+              <li>Microsoft Excel</li>
+              <li>Google Workspace</li>
+              <li>GitHub</li>
+              <li>GitHub Pages</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-number">
+              03 / PROFESSIONAL
+            </div>
+
+            <h3>
+              Professional Skills
+            </h3>
+
+            <ul class="skill-tags">
+              <li>Leadership</li>
+              <li>Communication</li>
+              <li>Organization</li>
+              <li>Team Coordination</li>
+              <li>Attention to Detail</li>
+            </ul>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-number">
+              04 / BUSINESS
+            </div>
+
+            <h3>
+              Business Knowledge
+            </h3>
+
+            <ul class="skill-tags">
+              <li>Accounting</li>
+              <li>Management</li>
+              <li>Supply Chain</li>
+              <li>Business Statistics</li>
+              <li>Information Systems</li>
+            </ul>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-number">
+              05 / LANGUAGES
+            </div>
+
+            <h3>
+              Languages
+            </h3>
+
+            <ul class="skill-tags">
+              <li>Chinese — Native</li>
+              <li>English — Native</li>
+              <li>Spanish — Basic</li>
+            </ul>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-number">
+              06 / LEADERSHIP
+            </div>
+
+            <h3>
+              Leadership &amp; Service
+            </h3>
+
+            <ul class="skill-tags">
+              <li>Esports Leadership</li>
+              <li>Mentoring</li>
+              <li>Volunteer Work</li>
+              <li>Scheduling</li>
+              <li>Stakeholder Communication</li>
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         PROJECTS
+    ================================================== -->
+
+    <section
+      class="projects-section"
+      id="projects"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Projects
+          </span>
+
+          <h2>
+            Selected projects and
+            applied experience.
+          </h2>
+
+          <p>
+            Work demonstrating my technical,
+            organizational, financial, and
+            leadership abilities.
+          </p>
+
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1 -->
+
+          <article class="project-card">
+
+            <div class="project-bar"></div>
+
+            <div class="project-content">
+
+              <div class="project-number">
+                PROJECT 01
+              </div>
+
+              <h3>
+                Personal Portfolio Website
+              </h3>
+
+              <p>
+                Designed and published a responsive professional
+                portfolio using HTML, CSS, JavaScript, GitHub,
+                and GitHub Pages. The website presents my
+                professional statement, skills, projects,
+                education, experience, and résumé.
+              </p>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>GitHub</span>
+                <span>GitHub Pages</span>
+              </div>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://rw809-sketch.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Website ↗
+              </a>
+
+              <a
+                href="https://github.com/rw809-sketch/rw809-sketch.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Code ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card">
+
+            <div class="project-bar"></div>
+
+            <div class="project-content">
+
+              <div class="project-number">
+                PROJECT 02
+              </div>
+
+              <h3>
+                Student Organization
+                Financial Operations
+              </h3>
+
+              <p>
+                Review and process 550+ student organization
+                invoices and payment requests while supporting
+                accurate documentation and compliance with
+                established guidelines.
+              </p>
+
+              <div class="project-tags">
+                <span>Finance</span>
+                <span>Invoice Review</span>
+                <span>Documentation</span>
+                <span>Accuracy</span>
+              </div>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="Resume%20Final.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Résumé Reference ↗
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/richardwu12/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card">
+
+            <div class="project-bar"></div>
+
+            <div class="project-content">
+
+              <div class="project-number">
+                PROJECT 03
+              </div>
+
+              <h3>
+                E-Sports Arena Operations
+                &amp; Communications
+              </h3>
+
+              <p>
+                Managed open-play sessions, arena assistants,
+                tryout support, member records, and operational
+                communication while coordinating with school
+                administrators, technology staff, and tournament
+                organizers.
+              </p>
+
+              <div class="project-tags">
+                <span>Leadership</span>
+                <span>Operations</span>
+                <span>Scheduling</span>
+                <span>Communication</span>
+              </div>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="Resume%20Final.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Résumé Reference ↗
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/richardwu12/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         EXPERIENCE
+    ================================================== -->
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Experience
+          </span>
+
+          <h2>
+            Putting business skills
+            into practice.
+          </h2>
+
+          <p>
+            Professional, leadership, and service
+            experience supporting my development
+            in accounting and management.
+          </p>
+
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              NOV 2025 — PRESENT
+            </div>
+
+            <div>
+
+              <h3>
+                Student Assistant
+              </h3>
+
+              <span class="company">
+                Office of Student Involvement and Leadership
+              </span>
+
+              <p>
+                Review and approve 550+ student organization
+                invoices and payment requests and process
+                records including event forms, travel
+                itineraries, and club constitutions.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              SEP 2024 — JUN 2025
+            </div>
+
+            <div>
+
+              <h3>
+                E-Sports Arena General Manager
+              </h3>
+
+              <span class="company">
+                Edison High School E-Sports Club
+              </span>
+
+              <p>
+                Managed open-play sessions, scheduled arena
+                assistants, supported tryouts, communicated
+                with the technology department, and monitored
+                member sign-in records.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              SEP 2023 — JUN 2024
+            </div>
+
+            <div>
+
+              <h3>
+                Board Member of Communications
+              </h3>
+
+              <span class="company">
+                Edison High School E-Sports Club
+              </span>
+
+              <p>
+                Communicated with school administration,
+                esports organizations, and tournament
+                organizers to coordinate schedules,
+                registration, and rule clarifications.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              FEB 2023 — JUN 2025
+            </div>
+
+            <div>
+
+              <h3>
+                Volunteer Mentor
+              </h3>
+
+              <span class="company">
+                Spanish Honor Society
+              </span>
+
+              <p>
+                Completed 50+ volunteer hours mentoring
+                young foreign children as they developed
+                foundational English speaking and reading
+                skills.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         EDUCATION
+    ================================================== -->
+
+    <section
+      class="education-section"
+      id="education"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Education
+          </span>
+
+          <h2>
+            Rutgers Business School.
+          </h2>
+
+          <p>
+            Academic preparation in accounting,
+            management, technology, supply chain,
+            and quantitative business methods.
+          </p>
+
+        </div>
+
+        <article class="education-card">
+
+          <div class="education-date">
+            EXPECTED MAY 2029
+          </div>
+
+          <div>
+
+            <h3>
+              Rutgers Business School
+            </h3>
+
+            <h4>
+              Rutgers, The State University of New Jersey
+            </h4>
+
+            <p>
+              Bachelor of Science in Accounting and
+              Leadership &amp; Management
+              • New Brunswick, New Jersey
+              • GPA: 4.0 / 4.0
+            </p>
+
+            <div class="honors">
+
+              <span>
+                Fall 2025 Dean's List
+              </span>
+
+              <span>
+                Spring 2026 Dean's List
+              </span>
+
+              <span>
+                BigFuture National First-Generation Recognition
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         RESUME
+    ================================================== -->
+
+    <section
+      class="resume-section"
+      id="resume"
+    >
+
+      <div class="container resume-grid">
+
+        <div class="resume-copy">
+
+          <span class="eyebrow">
+            Résumé
+          </span>
+
+          <h2>
+            View my full résumé.
+          </h2>
+
+          <p>
+            My résumé includes additional details about
+            my education, professional experience,
+            leadership positions, technical skills,
+            activities, honors, and interests.
+          </p>
+
+          <div class="resume-buttons">
+
+            <a
+              class="button button-white"
+              href="Resume%20Final.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Résumé ↗
+            </a>
+
+            <a
+              class="button button-white-outline"
+              href="Resume%20Final.pdf"
+              download="Richard-Wu-Resume.pdf"
+            >
+              Download PDF ↓
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="resume-preview">
+
+          <iframe
+            src="Resume%20Final.pdf#view=FitH"
+            title="Richard Wu Resume PDF"
+          ></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         CONTACT
+    ================================================== -->
+
+    <section
+      class="contact-section"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <span class="eyebrow">
+            Connect
+          </span>
+
+          <h2>
+            Let's build something valuable.
+          </h2>
+
+          <p>
+            I'm continuing to develop my experience in
+            accounting, management, business operations,
+            leadership, and technology. Connect with me
+            through LinkedIn or explore my work on GitHub.
+          </p>
+
+          <div class="contact-buttons">
+
+            <a
+              class="button button-scarlet"
+              href="https://www.linkedin.com/in/richardwu12/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+
+            <a
+              class="button button-white-outline"
+              href="https://github.com/rw809-sketch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              class="button button-white-outline"
+              href="Resume%20Final.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Résumé ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       FOOTER
+  ==================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year"></span>
+        Richard Wu • Rutgers Business School Portfolio
+      </p>
+
+      <div class="footer-links">
+
+        <a
+          href="https://www.linkedin.com/in/richardwu12/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/rw809-sketch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="Resume%20Final.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Résumé
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- ====================================================
+       JAVASCRIPT
+  ==================================================== -->
+
+  <script>
+    const yearElement =
+      document.getElementById("year");
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navigation =
+      document.getElementById("navigation");
+
+
+    /*
+     * Automatically display the current year.
+     */
+    yearElement.textContent =
+      new Date().getFullYear();
+
+
+    /*
+     * Open and close the mobile navigation.
+     */
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        const menuIsOpen =
+          navigation.classList.toggle("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(menuIsOpen)
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          menuIsOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
+
+        menuButton.textContent =
+          menuIsOpen ? "×" : "☰";
+      }
+    );
+
+
+    /*
+     * Close the mobile navigation after
+     * the visitor chooses a link.
+     */
+    navigation
+      .querySelectorAll("a")
+      .forEach((link) => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navigation
+              .classList
+              .remove("open");
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuButton.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+            menuButton.textContent =
+              "☰";
+          }
+        );
+
+      });
+
+
+    /*
+     * Close navigation when Escape is pressed.
+     */
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (event.key === "Escape") {
+
+          navigation
+            .classList
+            .remove("open");
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuButton.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+          menuButton.textContent =
+            "☰";
+        }
+      }
+    );
+  </script>
+
+</body>
+</html>
